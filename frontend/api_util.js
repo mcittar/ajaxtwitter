@@ -10,6 +10,16 @@ const APIUtil = {
       },
       success: response => success(response)
     });
+  },
+
+  createTweet: data => {
+    return $.ajax({
+      url: "/tweets",
+      method: 'POST',
+      dataType: 'json',
+      data: data,
+      
+    });
   }
 
 };
